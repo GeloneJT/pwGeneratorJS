@@ -90,7 +90,6 @@ console.log(symbols.length);
 var alphaNumericSymb = alphaBetLow + alphaBetUP + numeric + symbols;
 console.log(alphaNumericSymb);
 console.log(alphaNumericSymb.length);
-var pwd = "";
 
 
 function writePassword() {
@@ -110,18 +109,44 @@ function writePassword() {
     
   };
 
+  var plzword = "";
+
   var alphaUp = confirm("Would you like uppercase characters")
   console.log(alphaUp);
+  if (alphaUp){
+    plzword = plzword + alphaBetUP;
+    console.log(plzword);
+  }
+  else plzword = plzword;
+  console.log(plzword);
+
 
   var alphalow = confirm("Would you like lowercase characters")
   console.log(alphalow);
-  
+  if (alphalow){
+    plzword = plzword + alphaBetLow;
+    console.log(plzword);
+  }
+  else plzword = plzword;
+  console.log(plzword);
+
+
   var symbolchar = confirm("Would you like symbols characters")
   console.log(symbolchar);
+  if (symbolchar){
+    plzword = plzword + symbols;
+    console.log(plzword);
+  }
+  else plzword = plzword;
+
 
   var numeral = confirm("Would you like numbers")
   console.log(numeral);
-
+  if (numeral){
+    plzword = plzword + numeric;
+    console.log(plzword);
+  }
+  else plzword = plzword;
   
 }
 
