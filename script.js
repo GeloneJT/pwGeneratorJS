@@ -92,87 +92,87 @@ var alphaNumericSymb = alphaBetLow + alphaBetUP + numeric + symbols;
 console.log(alphaNumericSymb);
 console.log(alphaNumericSymb.length);
 
-
 /* Actovates upon button press to prompt questions for password*/
 function writePassword() {
-
   var passLength = parseInt(
     prompt("Choose a password length between 8 and 128 characters")
-   );
-    /* Returns user to beginning on declining input parameters*/
+  );
+  /* Returns user to beginning on declining input parameters*/
   if (isNaN(passLength) === true) {
-    alert("Password length must be provided as a number")
+    alert("Password length must be provided as a number");
     return;
-   }
+  }
 
   if (passLength < 8) {
     alert("Password length must be at least 8 chars");
     return;
-
-  
-    
-  };
-  console.log(passLength)
+  }
+  console.log(passLength);
 
   var plzword = "";
 
-  var alphaUp = confirm("Would you like uppercase characters")
+  var alphaUp = confirm("Would you like uppercase characters");
   console.log(alphaUp);
-  if (alphaUp){
+  if (alphaUp) {
     plzword = plzword + alphaBetUP;
     console.log(plzword);
-  }
-  else plzword = plzword;
+  } else plzword = plzword;
   console.log(plzword);
 
-
-  var alphalow = confirm("Would you like lowercase characters")
-  console.log(alphalow);
-  if (alphalow){
+  var alphaLow = confirm("Would you like lowercase characters");
+  console.log(alphaLow);
+  if (alphaLow) {
     plzword = plzword + alphaBetLow;
     console.log(plzword);
-  }
-  else plzword = plzword;
+  } else plzword = plzword;
   console.log(plzword);
 
-
-  var symbolchar = confirm("Would you like symbols characters")
-  console.log(symbolchar);
-  if (symbolchar){
+  var symbolChar = confirm("Would you like symbols characters");
+  console.log(symbolChar);
+  if (symbolChar) {
     plzword = plzword + symbols;
     console.log(plzword);
-  }
-  else plzword = plzword;
+  } else plzword = plzword;
 
-
-  var numeral = confirm("Would you like numbers")
+  var numeral = confirm("Would you like numbers");
   console.log(numeral);
-  if (numeral){
+  if (numeral) {
     plzword = plzword + numeric;
     console.log(plzword);
+  } else plzword = plzword;
+
+  if (
+    alphaUp === false &&
+    alphaLow === false &&
+    symbolChar === false &&
+    numeral === false
+  ) {
+    alert("At least one character type must be selected!!!");
+    return;
   }
-  else plzword = plzword;
 
-  var x = JSON.stringify(plzword);
-  console.log(x);
-
-  console.log(typeof plzword);
-
-  
-
-
-
-
-}
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
-
-// Write password to the #password input
+/*Converts  password into randomized string*/
+  var password = "";
+    for (var i = 0; i < passLength; i++){
+      password += plzword[Math.floor(Math.random() * plzword.length)];
+    }
+    console.log(password);
+    console.log(password.length);
+    console.log(typeof password);
+    return password;
+   }
 
 
 
-// Add event listener to generate button
+
+/*Pushes the password to #password*/
+var password = writePassword();
+var passwordText = document.querySelector("#password");
+
+
+passwordText.value = password;
+
+// // Write password to the #password input
+
+// // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
