@@ -92,6 +92,45 @@ console.log(alphaNumericSymb);
 console.log(alphaNumericSymb.length);
 var pwd = "";
 
+
+function writePassword() {
+
+  var passLength = parseInt(
+    prompt("Choose a password length between 8 and 128 characters")
+   );
+
+  if (isNaN(passLength) === true) {
+    alert("Password length must be provided as a number")
+    return;
+   }
+
+  if (passLength < 8) {
+    alert("Password length must be at least 8 chars");
+    return;
+    
+  };
+
+  var alphaUp = confirm("Would you like uppercase characters")
+  console.log(alphaUp);
+
+  var alphalow = confirm("Would you like lowercase characters")
+  console.log(alphalow);
+  
+  var symbolchar = confirm("Would you like symbols characters")
+  console.log(symbolchar);
+
+  var numeral = confirm("Would you like numbers")
+  console.log(numeral);
+
+  
+}
+
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+// }
+
 // Write password to the #password input
 // function writePassword(){
 //   var length = "";
@@ -102,31 +141,7 @@ var pwd = "";
 //   }
 // }
 
-function writePassword() {
-  
-    var passLength = parseInt(
-    prompt("Choose a password between 8 and 128 characters")
-    );
-    
-    if (isNaN(passLength) === true) {
-      alert("Password length must be provided as a number")
-  };
-  
-  if (passLength < 8) {
-      alert("Password length must be at least 8 chars");
-      return;
-  };
 
-  if (passLength >= 8) {
-    alert("Would you like Uppercase letters")
-  }
-}
-    
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
