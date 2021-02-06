@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+/* Variable arrays of alphabet characters up and lower case; Variable arrays for number values and special characters */
 var alphaBetLow = [
   "a",
   "b",
@@ -92,12 +93,13 @@ console.log(alphaNumericSymb);
 console.log(alphaNumericSymb.length);
 
 
+/* Actovates upon button press to prompt questions for password*/
 function writePassword() {
 
   var passLength = parseInt(
     prompt("Choose a password length between 8 and 128 characters")
    );
-
+    /* Returns user to beginning on declining input parameters*/
   if (isNaN(passLength) === true) {
     alert("Password length must be provided as a number")
     return;
@@ -106,8 +108,11 @@ function writePassword() {
   if (passLength < 8) {
     alert("Password length must be at least 8 chars");
     return;
+
+  
     
   };
+  console.log(passLength)
 
   var plzword = "";
 
@@ -147,24 +152,25 @@ function writePassword() {
     console.log(plzword);
   }
   else plzword = plzword;
+
+  var x = JSON.stringify(plzword);
+  console.log(x);
+
+  console.log(typeof plzword);
+
   
+
+
+
+
 }
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
 
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+  // passwordText.value = password;
 
-//   passwordText.value = password;
-// }
 
 // Write password to the #password input
-// function writePassword(){
-//   var length = "";
-//   charset = alphaNumericSymb
-//   retVal = "";
-//   for (var i = 0, n = charset.length; i < length; ++i){
-//     retVal += charset.charAt(Math.floor(Math.random() *n));
-//   }
-// }
 
 
 
