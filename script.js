@@ -1,91 +1,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 /* Variable arrays of alphabet characters up and lower case; Variable arrays for number values and special characters */
-var alphaBetLow = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+var alphaBetLow = "abcdefghijklmnopqrstuvwxyz";
 console.log(alphaBetLow);
 console.log(alphaBetLow.length);
-var alphaBetUP = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+var alphaBetUP = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 console.log(alphaBetUP);
 console.log(alphaBetUP.length);
-var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numeric = "1234567890";
 console.log(numeric);
 console.log(numeric.length);
-var symbols = [
-  "!",
-  "@",
-  "#",
-  "$",
-  "%",
-  "^",
-  "&",
-  "*",
-  "(",
-  ")",
-  "_",
-  "+",
-  "?",
-  "<",
-  ">",
-  "?",
-  "{",
-  "}",
-  "[",
-  "]",
-];
+var symbols = "!@#$%^&*()_+><}{][";
 console.log(symbols);
 console.log(symbols.length);
 var alphaNumericSymb = alphaBetLow + alphaBetUP + numeric + symbols;
@@ -116,7 +41,7 @@ function writePassword() {
   if (alphaUp) {
     plzword = plzword + alphaBetUP;
     console.log(plzword);
-  } else plzword = plzword;
+  }
   console.log(plzword);
 
   var alphaLow = confirm("Would you like lowercase characters");
@@ -124,7 +49,7 @@ function writePassword() {
   if (alphaLow) {
     plzword = plzword + alphaBetLow;
     console.log(plzword);
-  } else plzword = plzword;
+  }
   console.log(plzword);
 
   var symbolChar = confirm("Would you like symbols characters");
@@ -132,14 +57,14 @@ function writePassword() {
   if (symbolChar) {
     plzword = plzword + symbols;
     console.log(plzword);
-  } else plzword = plzword;
+  }
 
   var numeral = confirm("Would you like numbers");
   console.log(numeral);
   if (numeral) {
     plzword = plzword + numeric;
     console.log(plzword);
-  } else plzword = plzword;
+  }
 
   if (
     alphaUp === false &&
