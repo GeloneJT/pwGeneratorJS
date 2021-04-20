@@ -1,1 +1,1 @@
-# pwGeneratorJS
+# Password Generator
