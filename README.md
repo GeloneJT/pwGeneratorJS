@@ -45,7 +45,7 @@
   No tests included
 
   ## GitHub
-  GeloneJT
+  [GeloneJT](https://github.com/GeloneJT)
 
   ## Email
   jelani13@icloud.com
