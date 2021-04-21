@@ -1,7 +1,7 @@
 # Password Generator
 
   ## Description
-  The purpose of this application is provide the user with the abillity to generate a randomized password based on questions presented to them which include: desired password length, with or without upper case and/or lowercase letters, numerical characters, and special characters. Using this generator will allow the user to generate up to 1.429702652 E+12 possible combinations based on their input parameters.
+  The purpose of this application is provide the user with the abillity to generate a randomized password based on questions presented to the user which include: desired password length, with or without upper case and/or lowercase letters, numerical characters, and special characters. Using this generator will allow the user to generate up to 1.429702652 E+12 possible combinations based on their input parameters.
 
   ## Table of contents
   - [Installation](#installation)
@@ -20,7 +20,7 @@
 <hr>
 
   ## Usage
-  Launch the application in a brower of your choosing for use.
+  Launch the application in a browser of your choosing for use.
 
 
  Below is an example if 20 characters is selected with every character option.
@@ -31,6 +31,10 @@
   ![PWGeneratorOp3](img/PWGenThree.png)
   ![PWGeneratorOp4](img/PWGenFour.png)
   ![PWGeneratorResults](img/PWGenRes.png)
+  
+  Use the link below to try the application on your own.
+  
+  [PasswordGenerator](https://gelonejt.github.io/pwGeneratorJS/)
 
   <hr>
 
