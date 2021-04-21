@@ -23,7 +23,7 @@
   Launch the application in a brower of your choosing for use.
 
 
-## `Below is an example if 20 characters is selected with every character option.`
+## Below is an example if 20 characters is selected with every character option.
 
   ![PWGeneratorHome](img/PWGenOne.png)
   ![PWGeneratorOp1](img/PWGenTwo.png)
